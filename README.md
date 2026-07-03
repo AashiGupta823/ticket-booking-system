@@ -1,9 +1,13 @@
 # Ticket Booking System
 
+**🔗 Live App:** https://ticket-booking-system-xln2-git-main-aashi-gupta-s-projects.vercel.app
+**🔗 Backend API:** https://ticket-booking-system-i5jf.onrender.com
+
+> Note: Backend is on Render's free tier and may take 30-50 seconds to respond on first request after inactivity.
+
 A movie/concert ticket booking platform with a visual seat map, TTL-based seat
 holds, concurrency-safe booking, and an automatic waitlist with time-limited
 offers on cancellation.
-
 ## Tech Stack
 - **Backend:** Spring Boot 3.4.5, Java 21, Spring Data JPA, Spring Security (JWT)
 - **Database:** MySQL 8
