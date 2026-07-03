@@ -1,0 +1,43 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/ticket_booking}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:Aashi}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:change-this-to-a-long-random-secret-key-min-32-bytes}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  seat-hold:
+    ttl-minutes: ${SEAT_HOLD_TTL_MINUTES:10}
+    cleanup-interval-ms: ${SEAT_HOLD_CLEANUP_MS:30000}
+  waitlist:
+    offer-ttl-minutes: ${WAITLIST_OFFER_TTL_MINUTES:15}
+  mail:
+    from: ${MAIL_FROM:no-reply@ticketbooking.com}
+  frontend:
+    base-url: ${FRONTEND_BASE_URL:http://localhost:5173}
